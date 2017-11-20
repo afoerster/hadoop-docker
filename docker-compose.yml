@@ -1,0 +1,34 @@
+version: '2'
+networks:
+  pipewrench-net:
+    driver: bridge
+
+services:
+  kuduserver:
+    image: pipewrench_kudu_impala:latest
+    hostname: kuduserver
+    ports:
+      - 7051:7051
+      - 7050:7050
+      - 8051:8051
+      - 8050:8050
+      - 9000:9000
+      - 8080:8080
+      - 50010:50010
+      - 50020:50020
+      - 50070:50070
+      - 50075:50075
+      - 21000:21000
+      - 21050:21050
+      - 22000:22000
+      - 23000:23000
+      - 23020:23020
+      - 3306:3306
+      - 8030:8030
+      - 8031:8031
+      - 8032:8032
+      - 8033:8033
+      - 8088:8088
+    networks:
+      - pipewrench-net
+
