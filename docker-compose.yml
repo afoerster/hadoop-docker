@@ -5,7 +5,7 @@ networks:
 
 services:
   kuduserver:
-    image: pipewrench_kudu_impala:latest
+    build: ./pipewrench_docker_import_export
     hostname: kuduserver
     ports:
       - 7051:7051
