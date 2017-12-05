@@ -1,12 +1,9 @@
 version: '2'
-networks:
-  pipewrench-net:
-    driver: bridge
 
 services:
-  kuduserver:
-    build: ./pipewrench_docker_import_export
-    hostname: kuduserver
+  hadoop:
+    build: .
+    hostname: hadoop
     ports:
       - 7051:7051
       - 7050:7050
@@ -29,6 +26,4 @@ services:
       - 8032:8032
       - 8033:8033
       - 8088:8088
-    networks:
-      - pipewrench-net
 
